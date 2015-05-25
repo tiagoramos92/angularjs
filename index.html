@@ -7,8 +7,12 @@
 		<h1>Angular JS Demo</h1>
 		<div ng-app="TodoApp" ng-controller="TodoCtrl">
 			<ul>
-				<li ng-repeat="item in list">{{item.name}}</li>
+				<li ng-repeat="item in list">{{item.name}} <button ng-click="removeItem()">x</button></li>
 			</ul>
+
+			<h4>New Item</h4>
+			Item Name <input ng-model="newItemName" type="text">
+			<button ng-click="addItem()">Add Item</button>
 
 		</div>
 
@@ -18,6 +22,14 @@
 				$scope.list = [{
 					name: 'comprar barra Dechatlon'
 				}];
+				$scope.addItem = function(){
+					$scope.list.push({
+						name: $scope.newItemName
+					});
+				};
+				$scope.removeItem = function(item){
+					$scope.list.splice($scope.list.indexOf(item), 1);
+				};
 			});
 		</script>
 	</body>
