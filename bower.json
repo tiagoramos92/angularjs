@@ -1,0 +1,17 @@
+{
+  "name": "angularjs",
+  "version": "0.0.0",
+  "description": "app built in angular.js using phonegap",
+  "keywords": [
+    "angular.js",
+    "angular",
+    "js",
+    "JavaScript",
+    "phonegap"
+  ],
+  "authors": [
+    "Tiago Ramos"
+  ],
+  "license": "MIT",
+  "homepage": "index.html"
+}
