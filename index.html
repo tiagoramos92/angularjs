@@ -1,9 +1,24 @@
 <html>
 	<head>
+		<title>Angular Demo</title>
 		<script src="bower_components/angular/angular.js"></script>
 	</head>
 	<body>
 		<h1>Angular JS Demo</h1>
-		<div ng-app>{{1+1}}</div>
+		<div ng-app="TodoApp" ng-controller="TodoCtrl">
+			<ul>
+				<li ng-repeat="item in list">{{item.name}}</li>
+			</ul>
+
+		</div>
+
+
+		<script>
+			angular.module('TodoApp', []).controller('TodoCtrl', function($scope){
+				$scope.list = [{
+					name: 'comprar barra Dechatlon'
+				}];
+			});
+		</script>
 	</body>
 </html>
